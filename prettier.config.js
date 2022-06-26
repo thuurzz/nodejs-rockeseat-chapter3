@@ -1,0 +1,3 @@
+models.exports = {
+  singleQuote: false,
+}
