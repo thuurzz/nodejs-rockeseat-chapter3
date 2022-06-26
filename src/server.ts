@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import { router } from "./routes";
 import swaggerUI from "swagger-ui-express";
 import swaggerFile from "./swagger.json";
+import "./database"
 
 const app = express();
 
@@ -9,7 +10,7 @@ app.use(express.json());
 
 app.listen(3333, () => {
   console.log("Servidor online no likn: http://localhost:3333");
-  console.log("API Docs no likn: http://localhost:3333/api-docs");
+  console.log("API Docs no link: http://localhost:3333/api-docs");
 });
 
 
