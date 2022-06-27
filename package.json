@@ -3,7 +3,8 @@
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn --poll src/server.ts",
-    "clean": "killall node"
+    "clean": "killall node",
+    "typeorm": ""
   },
   "dependencies": {
     "csv-parse": "^5.2.0",
