@@ -1,4 +1,4 @@
-import { Category } from "../entities/Category";
+import { Category } from '../entities/Category';
 
 interface ICreateCategotyDTO {
   name: string;
@@ -11,4 +11,4 @@ interface ICategoryRepository {
   create({ name, description }: ICreateCategotyDTO): void;
 }
 
-export { ICategoryRepository, ICreateCategotyDTO }
+export { ICategoryRepository, ICreateCategotyDTO };

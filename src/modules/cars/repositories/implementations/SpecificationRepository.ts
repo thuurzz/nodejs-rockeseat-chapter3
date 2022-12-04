@@ -1,9 +1,13 @@
-import { Specification } from "../../entities/Specification";
-import { ISpecificationRepository, ICreateSpecificationDTO } from "../ISpecificationRepository";
+import { Specification } from '../../entities/Specification';
+import {
+  ISpecificationRepository,
+  ICreateSpecificationDTO,
+} from '../ISpecificationRepository';
 
 class SpecificationRepository implements ISpecificationRepository {
   private specifications: Specification[];
 
+  // eslint-disable-next-line no-use-before-define
   private static INSTANCE: SpecificationRepository;
 
   private constructor() {
@@ -14,7 +18,7 @@ class SpecificationRepository implements ISpecificationRepository {
     if (!SpecificationRepository.INSTANCE) {
       SpecificationRepository.INSTANCE = new SpecificationRepository();
     }
-    return this.INSTANCE;
+    return SpecificationRepository.INSTANCE;
   }
 
   create({ name, description }: ICreateSpecificationDTO): void {
@@ -34,10 +38,11 @@ class SpecificationRepository implements ISpecificationRepository {
   }
 
   findByName(name: string): Specification {
-    const specification = this.specifications.find((specification) => specification.name === name);
+    const specification = this.specifications.find(
+      (specification) => specification.name === name
+    );
     return specification;
   }
 }
 
-
-export { SpecificationRepository }
+export { SpecificationRepository };
